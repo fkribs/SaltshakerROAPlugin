@@ -53,6 +53,7 @@ const ROAPlugin = {
         }
 
         const roomCode = hashConnectionString(connectionString);
+        api.log(`[ROAPlugin] ConnectionString="${connectionString}" → roomCode=${roomCode}`);
 
         if (currentRoomCode === roomCode) return;
 
