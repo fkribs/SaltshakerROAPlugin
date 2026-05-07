@@ -1,0 +1,22 @@
+{
+  "name": "@saltshaker/plugin-roa",
+  "version": "0.1.0",
+  "description": "Saltshaker plugin for Rivals of Aether 2.",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "manifest.json",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist && rimraf -g \"*.tgz\"",
+    "build": "esbuild src/index.js --bundle --platform=node --target=node18 --outfile=dist/index.js --minify --sourcemap",
+    "bundle": "npm run clean && npm run build && npm pack",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "rimraf": "^6.0.0"
+  }
+}

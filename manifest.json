@@ -1,0 +1,10 @@
+{
+  "id": "rivals-of-aether",
+  "version": "0.1.0",
+  "entry": "dist/index.js",
+  "permissions": [
+    "file.read",
+    "file.watch"
+  ],
+  "displayName": "Rivals of Aether Plugin"
+}
